@@ -1,14 +1,20 @@
-# Homework
+# Basic Interpreter
+Basic Interpreter is a simple C++17 program that simulates an Interpreter for a very limited version of the well-known programming language **BASIC**. The program itself contains a number of statement classes, many of which are inherited from one another, to perform the necessary executions the input requires it to do. 
 
-Please use this, only as a reference while grading William's HW #2.
 
 ## About
-HW2 is a simple Interpreter for a very limited version of the well-known programming language BASIC (I totally did not just copy and paste this). The program itself contains a number of statement classes, many of which are inherited of one another, to perform the necessary executions the input requires it to do. 
+As mentioned, this is an Interpreter for a very limited version of **BASIC**. Therefore, the only statements that are supported are as follows:
+1. Arithmetic Statements - (ADD, SUB, MULT, DIV)
+2. Print Statements - (PRINT, PRINTALL)
+3. Jump Statements - (GOTO, GOSUB, RETURN)
+4. Conditional Statements - (IF)
 
 
-## Inheritance
-There are two major inheritances to point out (other than the given Statement class). In this implementation, all the mathematical operation statements inherit from MathStatement, and all the statements that perform line jumps inherit from the GotoStatement. 
-
-
-### **Notice!**
-This is important to note. At the time of working on the assignment, not much error consideration was put in when making the makefile. Hence, when _make clean_ is called, all the executables and object files will be deleted! Please put this into consideration if anything goes wrong during the grading process. Thank you.
+## Run
+In order to run the program, you need at least C++17 `g++` (default) compiler. In addition, while you can use the provided text file, you are welcome to create your own text file with you own custom sequence of **BASIC** instructions and pass that as an argument when runningg the program.
+Open a _Terminal_ console in the same directory as the project and do as follows:
+```shell
+$ make all
+$ ./interpreter *your file name here*
+```
+Run make clean to clean your directory of all object files
