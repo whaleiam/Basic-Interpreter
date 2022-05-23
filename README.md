@@ -15,6 +15,6 @@ In order to run the program, you need at least C++17 `g++` (default) compiler. I
 Open a _Terminal_ console in the same directory as the project and do as follows:
 ```shell
 $ make all
-$ ./interpreter *your file name here*
+$ ./interpreter (your text file here)
 ```
 Run make clean to clean your directory of all object files
